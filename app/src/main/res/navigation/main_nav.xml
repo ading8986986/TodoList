@@ -7,21 +7,19 @@
 
     <fragment
         android:id="@+id/taskListFragment"
-        android:name="com.example.todolist.features.task.presentation.ui.TaskListFragment"
+        android:name="com.example.todolist.features.task.view.ui.TaskListFragment"
         android:label="TaskListFragment" >
         <action
             android:id="@+id/action_taskListFragment_to_taskDetailFragment"
-            app:destination="@id/taskDetailFragment" />
+            app:destination="@id/taskDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/taskDetailFragment"
-        android:name="com.example.todolist.features.task.presentation.ui.TaskDetailFragment"
+        android:name="com.example.todolist.features.task.view.ui.TaskDetailFragment"
         android:label="fragment_task_detail"
-        tools:layout="@layout/fragment_task_detail" >
-        <argument
-            android:name="task"
-            app:argType="com.example.todolist.features.task.domain.model.Task"
-            app:nullable="true"
-            android:defaultValue="@null" />
-    </fragment>
+        tools:layout="@layout/fragment_task_detail" />
 </navigation>

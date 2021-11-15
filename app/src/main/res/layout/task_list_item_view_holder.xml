@@ -5,47 +5,49 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="5dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
         app:cardMaxElevation="10dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true">
+        android:layout_margin="10dp"
+        app:cardUseCompatPadding="false">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="10dp"
-            android:paddingHorizontal="20dp">
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp">
             <TextView
                 android:id="@+id/date"
+                style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                style="@style/TextAppearance.AppCompat.Body1"
                 tools:text="2021-01-02"/>
             <TextView
                 android:id="@+id/title"
+                style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                style="@style/TextAppearance.AppCompat.Subhead"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/date"
+                android:ellipsize="end"
                 android:gravity="left"
                 android:maxLines="1"
-                android:ellipsize="end"
+                app:layout_constraintEnd_toStartOf="@id/date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="@string/app_name"/>
             <TextView
                 android:id="@+id/content"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title"
-                app:layout_constraintEnd_toEndOf="@id/title"
-                tools:text="This is my first task"
-                android:maxLines="2"
-                android:ellipsize="end" />
+                tools:text="This is my first task" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

@@ -5,7 +5,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.task.presentation.ui.TaskListFragment">
+        tools:context=".features.task.view.ui.TaskListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -27,15 +27,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlways"
-                app:title="@string/app_name" />
+                app:title="@string/task_list" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <ProgressBar
-            android:id="@+id/loadingView"
+        <TextView
+            android:id="@+id/hintView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="@string/no_task"
             android:visibility="gone"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
